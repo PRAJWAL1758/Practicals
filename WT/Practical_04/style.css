@@ -1,0 +1,27 @@
+body{
+    
+    text-align: center;
+}
+
+fieldset{
+    background-color: lightcoral;
+    border: 2px solid black;
+
+    width: 30%;
+}
+
+input:hover{
+    background-color: gray;
+}
+
+form{
+   padding-left: 40%;
+   
+  
+}
+textarea:hover{
+    background-color: lightgray;
+}
+legend{
+    color: green;
+}

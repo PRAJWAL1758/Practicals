@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>regform</title>
+<link href="style.css" rel="stylesheet"></link>
+
+
+<script type="text/javascript">
+function Validation()
+{
+var emailID = document.myForm.EMail.value;
+var num=document.myForm.ph.value;
+var atpos = emailID.indexOf("@");
+var dotpos = emailID.lastIndexOf(".");
+if (atpos< 1 || ( dotpos - atpos< 2 ))
+{
+alert("Please enter correct email ID")
+document.myForm.EMail.focus() ;
+return false;
+}
+else if (isNaN(num)){
+document.getElementById("ph");
+alert("Please enter numeric only.")
+return false;
+}else{
+return true;
+}
+}
+</script>
+
+</head>
+<body>
+    <center>
+    <h2>Welcome to Registraction Page</h2>
+
+<div class="con">
+<form name="myForm" align="center">
+
+<fieldset>
+    <legend>Student Information:</legend>
+<div class="con2">
+<imgsrc="D:/handshake.jpg" width=380px height=100px></img>
+</div>
+
+<div class="main">
+<table align="center">
+<tr><td><b><br>Welcome to Registration Page<br><br></td></tr>
+</table>
+<div class="con1">
+<table align="center">
+<tr>
+<td>Full Name:</td>
+<td><input type="text" id="FirstName" value="" required></input></td>
+</tr>
+
+<tr>
+<td>Class:</td>
+<td><input type="text" id="Class" value="" required></input></td>
+</tr>
+
+<tr>
+<td>Department:</td>
+<td><input type="text" id="Department" value=""
+required></input></td>
+</tr>
+
+<tr>
+Web Technology Lab Manual PGMCOE</tr>
+<td>Address:</td>
+<td><textarea row="3" column="2" value=""
+required></textarea></td>
+</tr>
+
+<tr>
+<td>Email Id:</td>
+<td><input type="text" value="" id="EMail"
+required></input></td>
+</tr>
+
+<tr>
+<td>Phone no:</td>
+<td><input type="text" id="ph" value="" required></input></td>
+</tr>
+
+<tr>
+<tr></tr><tr></tr></table>
+<table align="center">
+<td><input type="submit" value="SUBMIT" onclick="return(Validation());"></td>
+<td><input type="reset" value="CANCEL"></td>
+</tr>
+
+</table>
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+</center>
+</body>
+</html>
